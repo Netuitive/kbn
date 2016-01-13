@@ -1,0 +1,22 @@
+{
+  "name": "kbn",
+  "authors": [
+    "jmassey <jmassey@netuitive.com>"
+  ],
+  "description": "Library to format numbers with common units.",
+  "main": "lib/kbn.js",
+  "moduleType": [],
+  "license": "Apache 2.0",
+  "homepage": "http://netuitive.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+  }
+}
