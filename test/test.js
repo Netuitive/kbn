@@ -41,11 +41,11 @@ testValueFormat('none', 2.75e-10, 0, 10, '3e-10');
 testValueFormat('none', 0, 0, 2, '0');
 testValueFormat('dB', 10, 1000, 2, '10.00 dB');
 
-testValueFormat('percent', 0, 0, 0, '0%');
-testValueFormat('percent', 53, 0, 1, '53.0%');
-testValueFormat('percentunit', 0.0, 0, 0, '0%');
-testValueFormat('percentunit', 0.278, 0, 1, '27.8%');
-testValueFormat('percentunit', 1.0, 0, 0, '100%');
+testValueFormat('percent', 0, 0, 0, '0 %');
+testValueFormat('percent', 53, 0, 1, '53.0 %');
+testValueFormat('percentunit', 0.0, 0, 0, '0 %');
+testValueFormat('percentunit', 0.278, 0, 1, '27.8 %');
+testValueFormat('percentunit', 1.0, 0, 0, '100 %');
 
 testValueFormat('currencyUSD', 7.42, 10000, 2, '$7.42');
 testValueFormat('currencyUSD', 1532.82, 1000, 1, '$1.53K');
@@ -96,17 +96,28 @@ function testFormatValue(unit, value, result) {
 }
 
 // Nanoseconds
-testFormatValue('ns', 10, '10.00 ns');
-testFormatValue('ns', 10000, '10.00 µs');
-testFormatValue('ns', 100000000, '100.00 ms');
-testFormatValue('ns', 10000000000, '10.00 s');
+testFormatValue('ns', 10, '10 ns');
+testFormatValue('ns', 10000, '10.0 µs');
+testFormatValue('ns', 100000000, '100 ms');
+testFormatValue('ns', 10000000000, '10.0 s');
 testFormatValue('ns', 1000000000000, '16.67 min');
 
 // Milliseconds
-testFormatValue('ms', 10000, '10.00 s');
+testFormatValue('ms', 10000, '10.0 s');
 
 // minutes
-testFormatValue('m', 10, '10.00 min');
-testFormatValue('m', 1000, '16.67 hour');
-testFormatValue('m', 10000, '6.94 day');
-testFormatValue('m', 100000, '9.92 week');
+testFormatValue('m', 10, '10 min');
+testFormatValue('m', 1000, '16.7 hour');
+testFormatValue('m', 10000, '6.9 day');
+testFormatValue('m', 100000, '9.9 week');
+
+// percent
+testFormatValue('percent', 0.1, '0.10 %');
+testFormatValue('percent', 100, '100 %');
+testFormatValue('percent', 100.0015, '100 %');
+testFormatValue('percent', 0.0015, '0.0015 %');
+
+// AWS Units
+testFormatValue('Percent', 45.4, '45 %');
+testFormatValue('Bytes', 1024, '1.00 KiB');
+testFormatValue('Seconds', 10000, '2.78 hour');

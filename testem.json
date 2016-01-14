@@ -9,6 +9,6 @@
   ],
   "src_files":[
     "lib/*.js",
-    "test/*qunit.js"
+    "test/*.js"
   ]
 }
