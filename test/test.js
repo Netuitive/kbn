@@ -97,6 +97,7 @@ describe('AWS Data', function() {
   testFormatValue('Bytes', 10240, '10 KiB');
   testFormatValue('Seconds', 10000, '2.778 hr');
   testFormatValue('Percent', 0, '0 %');
+  testFormatValue('None', 1, '1');
 });
 
 describe('Bad Inputs', function() {
