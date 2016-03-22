@@ -24,6 +24,7 @@ describe('Time', function() {
     testFormatValue('ms', 651500000, '7.541 day');
   });
   describe('Seconds', function() {
+    testFormatValue('s', 0.0245, '24.5 ms');
     testFormatValue('s', 24, '24 s');
     testFormatValue('s', 246, '4.1 min');
     testFormatValue('s', 24567, '6.824 hr');
