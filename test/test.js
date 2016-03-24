@@ -1,7 +1,7 @@
 
 function testFormatValue(unit, value, result) {
   it('formatValue() should translate ' + value + ' as ' + result, function() {
-    var str = kbn.formatValue(value, unit)
+    var str = kbn.formatValue(value, unit);
     assert.equal(str, result);
   });
 }
@@ -85,6 +85,13 @@ describe('Data Rates', function() {
   testFormatValue('rps', 123456789, '123.5 M rps');
   testFormatValue('wps', 789000000, '789 M wps');
   testFormatValue('iops', 11000000000, '11 B iops');
+});
+
+describe('Memory', function() {
+  testFormatValue('fps', 123, '123 fps');
+  testFormatValue('fps', 654000, '654 K fps');
+  testFormatValue('Pps', 789000000, '789 M Pps');
+  testFormatValue('Pps', 12300000000, '12.3 B Pps');
 });
 
 describe('Data', function() {
