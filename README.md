@@ -136,6 +136,16 @@ Supported unit codes recognized by the formatValue api call.
   </tr>
 
   <tr>
+    <td colspan="3"><div align="center"><em>memory</em></div></td>
+  </tr>
+  <tr>
+    <td>fps</td><td>faults/sec (fps)</td>
+  </tr>
+  <tr>
+    <td>Pps</td><td>pages/sec (Pps)</td>
+  </tr>
+
+  <tr>
     <td colspan="3"><div align="center"><em>currency</em></div></td>
   </tr>
   <tr>
