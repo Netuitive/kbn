@@ -90,6 +90,15 @@ Supported unit codes recognized by the formatValue api call.
   <tr>
     <td>Bps</td><td>bytes/sec</td>
   </tr>
+  <tr>
+    <td>kBps</td><td>kilobytes/sec</td>
+  </tr>
+  <tr>
+    <td>mBps</td><td>megabytes/sec</td>
+  </tr>
+  <tr>
+    <td>gBps</td><td>gigabytes/sec</td>
+  </tr>
 
   <tr>
     <td colspan="3"><div align="center"><em>time</em></div></td>
