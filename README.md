@@ -1,4 +1,4 @@
-KBN 
+KBN
 =====
 
 <img src="https://travis-ci.org/Netuitive/kbn.svg?branch=master"/>
@@ -71,6 +71,9 @@ Supported unit codes recognized by the formatValue api call:
 | pps | packets/sec |
 | bps | bits/sec |
 | Bps | bytes/sec |
+| kBps | kilobytes/sec |
+| mBps | megabytes/sec |
+| gBps | gigabytes/sec |
 
 #### Time
 
@@ -169,4 +172,4 @@ Supported unit codes recognized by the formatValue api call:
 Additional Information
 -----------------------
 
-KBN was originally imported from [Graphana](https://github.com/grafana/grafana/blob/8ee0e5d11f8427b5a68aab69c73c6d4809bdf5bb/public/app/core/utils/kbn.js). 
+KBN was originally imported from [Graphana](https://github.com/grafana/grafana/blob/8ee0e5d11f8427b5a68aab69c73c6d4809bdf5bb/public/app/core/utils/kbn.js).
