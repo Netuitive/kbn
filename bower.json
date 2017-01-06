@@ -5,7 +5,7 @@
   ],
   "description": "Library to format numbers with common units.",
   "main": "lib/kbn.js",
-  "moduleType": [],
+  "moduleType": ["node", "globals"],
   "license": "Apache 2.0",
   "homepage": "http://netuitive.com",
   "private": true,
