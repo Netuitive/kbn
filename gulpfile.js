@@ -5,7 +5,7 @@ var gulp = require('gulp'),
   jshint = require('gulp-jshint'),
   wrap = require('gulp-wrap'),
   defineModule = require('gulp-define-module'),
-  mochaPhantomJS = require('gulp-mocha-phantomjs'),
+  mocha = require('gulp-mocha'),
   babel = require('gulp-babel');
 
 var JS_PATH = 'lib/*.js';
@@ -38,16 +38,16 @@ gulp.task('develop-script', function() {
 
 //Testing task to use netuitive-api.js
 gulp.task('develop-test', ['lint', 'develop-script'], function() {
-  return gulp.src('test/assets/develop.html')
-    .pipe(mochaPhantomJS({
+  return gulp.src([TEST_JS_PATH], { read: false })
+    .pipe(mocha({
       reporter: 'spec'
     }));
 });
 
 //Testing task to use netuitive-api.min.js
 gulp.task('production-test', ['lint', 'production-script'], function() {
-  return gulp.src('test/assets/index.html')
-    .pipe(mochaPhantomJS({
+  return gulp.src([TEST_JS_PATH], { read: false })
+    .pipe(mocha({
       reporter: 'spec'
     }));
 });

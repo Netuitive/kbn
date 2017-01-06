@@ -1,3 +1,5 @@
+var assert = require('assert');
+var kbn = require('../lib/kbn.js')
 
 function testFormatValue(unit, value, result) {
   it('formatValue() should translate ' + value + ' as ' + result, function() {
@@ -15,6 +17,17 @@ describe('Time', function() {
     testFormatValue('ns', 1000000000000, '16.67 min');
     testFormatValue('ns', 2558, '2.558 µs');
   });
+
+  describe('Microseconds', function(){
+    testFormatValue('µs', 10, '10 µs');
+    testFormatValue('µs', 10000, '10 ms');
+    testFormatValue('µs', 100000000, '1.667 min');
+    testFormatValue('µs', 10000000000, '2.778 hr');
+    testFormatValue('µs', 1000000000000, '11.57 day');
+    testFormatValue('µs', 2558, '2.558 ms');
+   });
+
+
   describe('Milliseconds', function() {
     testFormatValue('ms', 0.0024, '0.0024 ms');
     testFormatValue('ms', 100, '100 ms');
