@@ -1,1 +1,1 @@
-export function formatValue(value: number, unit: string): number;
+export function formatValue(value: number, unit: string): string;
