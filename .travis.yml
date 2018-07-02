@@ -1,3 +1,4 @@
 before_script:
   - npm install
+  - npm install gulp-cli -g
 script: gulp production

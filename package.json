@@ -2,7 +2,7 @@
   "name": "kbn",
   "version": "0.0.2",
   "description": "Library to format numbers with common units.",
-  "main": "kbn.js",
+  "main": "lib/kbn.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
