@@ -109,7 +109,8 @@ describe('Memory', function() {
 
 describe('Data', function() {
   testFormatValue('bytes', 10240, '10 KiB');
-  testFormatValue('kbytes', 10240, '10 MiB');
+  testFormatValue('kibytes', 10240, '10 MiB');
+  testFormatValue('kbytes', 10000, '10 MB');
 });
 
 describe('AWS Data', function() {
