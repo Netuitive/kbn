@@ -61,8 +61,11 @@ Supported unit codes recognized by the formatValue api call:
 | bits | bits |
 | bytes | bytes |
 | kbytes | kilobytes |
+| kibytes | kibibytes |
 | mbytes | megabytes |
+| mibytes | mebibytes |
 | gbytes | gigabytes |
+| gibytes | gibibytes |
 
 #### Data Rate
 
