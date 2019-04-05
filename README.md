@@ -59,7 +59,8 @@ Supported unit codes recognized by the formatValue api call:
 | Code | Unit |
 |------|------|
 | bits | bits |
-| bytes | bytes |
+| bytes | bytes (base2) |
+| bytesd | bytes (base10) |
 | kbytes | kilobytes |
 | kibytes | kibibytes |
 | mbytes | megabytes |
